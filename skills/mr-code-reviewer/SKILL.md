@@ -1,7 +1,6 @@
 ---
 name: mr-code-reviewer
 description: "专业的 GitLab MR 代码审查技能，支持 Java 和 TypeScript/JavaScript，检查代码质量、安全漏洞、性能问题和 API 兼容性。采用两阶段策略：快速扫描识别明显问题，深度分析评估设计和架构。当用户要求审查 GitLab MR、检查代码质量、或评估代码变更时使用。"
-allowed-tools: Bash, Read, Write, Glob, Grep
 ---
 
 # MR Code Reviewer - GitLab MR 专业代码审查
@@ -258,7 +257,7 @@ allowed-tools: Bash, Read, Write, Glob, Grep
 
 2. **确认信息**
    ```
-   Claude: 我将审查 MR !123。需要以下信息：
+   Agent: 我将审查 MR !123。需要以下信息：
    - GitLab URL（默认: https://gitlab.com）
    - 项目 ID
    - GitLab 访问令牌
@@ -268,7 +267,7 @@ allowed-tools: Bash, Read, Write, Glob, Grep
 
 3. **执行快速扫描**
    ```
-   Claude: 正在执行快速扫描...
+   Agent: 正在执行快速扫描...
    - ✅ 获取 MR 变更文件（15 个文件）
    - ✅ 安全快速检查
    - ✅ 代码规范检查
@@ -279,7 +278,7 @@ allowed-tools: Bash, Read, Write, Glob, Grep
 
 4. **执行深度分析**（如果需要）
    ```
-   Claude: 正在执行深度分析...
+   Agent: 正在执行深度分析...
    - ✅ 架构和设计模式分析
    - ✅ 性能深度分析
    - ✅ API 兼容性检查
@@ -288,7 +287,7 @@ allowed-tools: Bash, Read, Write, Glob, Grep
 
 5. **提供审查报告**
    ```
-   Claude: 审查完成！生成了以下文件：
+   Agent: 审查完成！生成了以下文件：
    - code-review-report.md（完整报告）
    - quick-scan-results.md（快速扫描结果）
 

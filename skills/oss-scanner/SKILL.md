@@ -1,7 +1,6 @@
 ---
 name: oss-scanner
 description: "扫描项目开源组件并分析许可证合规风险。识别 Maven/Gradle/npm 依赖，检测 GPL/AGPL/LGPL 等传染性许可证，评估源代码自主性影响，生成详细风险报告。当用户需要扫描开源组件、检查许可证合规、评估开源风险或生成使用报告时使用。"
-allowed-tools: Glob, Read, WebSearch, Write
 ---
 
 # 开源组件扫描与合规分析
@@ -29,7 +28,7 @@ allowed-tools: Glob, Read, WebSearch, Write
 
 ### 第一步：识别项目类型并确认扫描范围
 
-1. **自动搜索依赖文件**（使用 Glob 工具）：
+1. **自动搜索依赖文件**：
    ```
    **/pom.xml          # Maven
    **/build.gradle*    # Gradle
@@ -43,28 +42,28 @@ allowed-tools: Glob, Read, WebSearch, Write
      - 发现前端项目 → 询问是否包含 devDependencies
    - 如果只有单一项目类型，直接开始扫描，无需询问
 
-3. **工具清单**：
-   - **Glob** - 搜索依赖文件
-   - **Read** - 读取依赖文件内容
-   - **WebSearch** - 查询许可证信息
-   - **Write** - 导出报告（用户请求时）
+3. **处理能力**：
+   - 搜索依赖文件
+   - 读取依赖文件内容
+   - 查询许可证信息
+   - 在用户请求时导出报告
 
 ### 第二步：扫描依赖文件
 
 根据项目类型，读取相应的依赖文件：
 
 **Java Maven 项目**：
-- 使用 Read 工具读取 `pom.xml`
+- 读取 `pom.xml`
 - 提取 `<dependencies>` 部分的所有依赖
 - 记录 groupId、artifactId、version
 
 **Java Gradle 项目**：
-- 使用 Read 工具读取 `build.gradle` 或 `build.gradle.kts`
+- 读取 `build.gradle` 或 `build.gradle.kts`
 - 提取 `dependencies` 块中的依赖声明
 - 解析 implementation、api、compileOnly 等配置
 
 **前端项目**：
-- 使用 Read 工具读取 `package.json`
+- 读取 `package.json`
 - 提取 `dependencies` 和 `devDependencies`
 - 记录包名和版本
 
@@ -73,8 +72,8 @@ allowed-tools: Glob, Read, WebSearch, Write
 **对每个组件执行以下步骤**：
 
 1. **查询许可证**：
-   - **Java 组件**：WebSearch 搜索 `Maven {groupId}:{artifactId} license`
-   - **npm 组件**：WebSearch 搜索 `npm {package-name} license`
+   - **Java 组件**：搜索 `Maven {groupId}:{artifactId} license`
+   - **npm 组件**：搜索 `npm {package-name} license`
    - **优先来源**：Maven Central、npmjs.com 官方页面
 
 2. **标准化许可证名称**：

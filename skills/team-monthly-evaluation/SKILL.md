@@ -1,7 +1,6 @@
 ---
 name: team-monthly-evaluation
 description: "自动化生成团队月度综合评价。工作流程：(1)运行clean_work_log.py清洗txt工作日志并生成JSON；(2)运行init_report.py生成评价模板；(3)基于四维度评分标准完成团队和成员评价。当用户提供txt格式工作日志并要求生成月度评价、分析团队表现、或需要绩效评估建议时使用。"
-allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 ---
 
 # 团队月度评价
@@ -74,7 +73,7 @@ python scripts/init_report.py <input.json> <output.md>
 
 ### 步骤5：完成团队整体评价
 
-基于已读取的JSON数据，分析团队整体表现，使用Edit工具填充模板的"一、团队整体评分"部分。
+基于已读取的JSON数据，分析团队整体表现，填充模板的"一、团队整体评分"部分。
 
 **输出要求**：参考 [references/output-patterns.md](references/output-patterns.md) 第1.2节"团队整体评分"
 
@@ -84,13 +83,17 @@ python scripts/init_report.py <input.json> <output.md>
 
 **强制读取** [references/scoring-guide.md](references/scoring-guide.md)，严格按照评分标准为每个成员评分。
 
-基于已读取的JSON数据和评分标准，使用Edit工具填充模板的"二、团队成员评分"部分。
+基于已读取的JSON数据和评分标准，填充模板的"二、团队成员评分"部分。
 
 **评分流程**：
-1. 阅读每个成员的具体工作内容（`details`字段）
-2. 参考评分参考数据（`scoring_reference`字段）
-3. 综合判断进行四维度评分（JSON数据是参考，不是最终答案）
-4. 确定评级（S/A+/A/B+/B/C），严格按照评级分布规则
+1. 先检查用户输入或任务上下文中是否明确给出S/A/C人员名单、比例、名额或分布要求
+2. 如果已提供S/A/C相关信息，必须按提供的信息确定对应评级或分布，再结合`details`和`scoring_reference`校准四维度分数
+3. 如果没有提供任何S/A/C相关信息，才以`scoring_reference`规则、`details`字段和评分标准独立评分
+4. 一般情况不评S；除非用户明确指定，或成员贡献显著高于团队其他成员且符合S级标准和评级分布规则
+5. 阅读每个成员的具体工作内容（`details`字段）
+6. 参考评分参考数据（`scoring_reference`字段）
+7. 综合判断进行四维度评分（JSON数据是参考，不是最终答案）
+8. 确定评级（S/A+/A/B+/B/C），严格按照评级分布规则
 
 **输出要求**：参考 [references/output-patterns.md](references/output-patterns.md) 第1.3节"团队成员评分"
 
@@ -102,7 +105,7 @@ python scripts/init_report.py <input.json> <output.md>
 
 ### 步骤7：完成优秀成员事迹
 
-基于已读取的JSON数据和团队结构信息（[references/team-structure.md](references/team-structure.md)），使用Edit工具填充模板的"三、优秀成员事迹（S、A+、A评级）"部分。
+基于已读取的JSON数据和团队结构信息（[references/team-structure.md](references/team-structure.md)），填充模板的"三、优秀成员事迹（S、A+、A评级）"部分。
 
 **输出要求**：参考 [references/output-patterns.md](references/output-patterns.md) 第1.4节"优秀成员事迹"
 
@@ -110,7 +113,7 @@ python scripts/init_report.py <input.json> <output.md>
 
 ### 步骤8：其他成员综合评价
 
-基于已读取的JSON数据，使用Edit工具填充模板的"四、其他成员综合评价"部分。
+基于已读取的JSON数据，填充模板的"四、其他成员综合评价"部分。
 
 **输出要求**：参考 [references/output-patterns.md](references/output-patterns.md) 第1.5节"其他成员综合评价"
 
@@ -118,7 +121,7 @@ python scripts/init_report.py <input.json> <output.md>
 
 ### 步骤9：团队改进建议
 
-基于已读取的JSON数据和整体分析，使用Edit工具填充模板的"五、团队改进建议"部分。
+基于已读取的JSON数据和整体分析，填充模板的"五、团队改进建议"部分。
 
 **输出要求**：参考 [references/output-patterns.md](references/output-patterns.md) 第1.6节"团队改进建议"
 
@@ -130,10 +133,10 @@ python scripts/init_report.py <input.json> <output.md>
 
 **检查流程**：
 
-1. **读取生成的报告**：使用Read工具读取生成的月度评价报告
+1. **读取生成的报告**：读取生成的月度评价报告
 2. **读取质量检查清单**：参考 [references/output-patterns.md](references/output-patterns.md) 第三节"质量检查清单"
 3. **逐项检查**：按照检查清单的6个类别（结构完整性、数据准确性、评分公平性、格式规范性、内容质量、语言专业性）逐项验证
-4. **修复问题**：如果发现问题，使用Edit工具修复
+4. **修复问题**：如果发现问题，直接修复
 5. **输出检查结果**：向用户报告检查结果，说明是否通过检查，如有问题已修复
 
 **检查要点**：

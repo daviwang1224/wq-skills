@@ -1,7 +1,6 @@
 ---
 name: datamodel-checker
 description: 检查KMMOM数据模型设计文档的规范符合性和业务设计合理性。用于验证数据模型文档是否符合团队规范标准、命名约定、数据类型定义、继承关系、ISA95设计模式等，发现规范违反、逻辑错误和不一致问题。当用户要求检查数据模型、验证模型文档、审查模型设计时使用。
-allowed-tools: Read, Write, Glob, Grep
 ---
 
 # 数据模型检查技能

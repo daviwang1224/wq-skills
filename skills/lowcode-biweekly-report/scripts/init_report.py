@@ -256,7 +256,7 @@ def main():
         print(f"团队人数: {data['summary']['person_count']}")
         print(f"工作日数: {data['summary']['work_days']}")
         print("="*50)
-        print("\n下一步: 使用Claude通过交互式问答填充模板中的TODO标记部分")
+        print("\n下一步: 通过交互式问答填充模板中的TODO标记部分")
 
     except Exception as e:
         print(f"\n错误: {e}")

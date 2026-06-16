@@ -1,7 +1,6 @@
 ---
 name: colleague-wangqing
 description: 王晴，武汉开目信息技术股份有限公司 MOM事业部产品开发部经理 / 低代码平台产品经理
-user-invocable: true
 ---
 
 # 王晴

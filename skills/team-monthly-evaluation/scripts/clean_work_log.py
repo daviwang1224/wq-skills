@@ -56,20 +56,21 @@ class WorkLogCleaner:
         # []标签
         self.bracket_pattern = r'\[\]'
 
-        # 触发跳过的关键词
+        # 触发跳过的区块标题
         self.skip_triggers = ['每日金句', '明日计划', '本月计划', '月计划']
+        self.skip_trigger_pattern = (
+            r'^(?:每日金句|明日计划|本月计划|月计划|'
+            r'\d+月计划|[一二三四五六七八九十]+月计划)(?:[：:（(\s]|$)'
+        )
 
         # 姓名提取正则（支持全角和半角括号）
         self.name_pattern = r'[（(]([^）)]+)[）)]'
 
-        # 非姓名词汇过滤列表（技术术语、通用词汇等）
-        # 以及需要忽略的人员名单
-        self.non_name_words = {
-            '操作', '资源', '主从', '进度', '已完成', '完成',
-            '例如', '如', '等', '或', '和', '与', '及',
-            '待处理', '处理', '优化', '调整', '修复', '开发',
-            # 忽略的人员
-            '蔡青', '陈聪', '杨勇', '宋珮', '喻洁', '程博'
+        # 仅提取产品开发部固定人员
+        self.team_members = {
+            '刘连冬', '孟翔', '刘佳伟', '鲁志航', '危放', '薛启宽',
+            '石松庆', '谢天浩', '李鸿坤', '李飞', '袁登', '尹进雄',
+            '施亚铭', '李正', '魏宪党', '方清', '廖沌金'
         }
 
         # 评分关键词配置（方便扩展和修改规则）
@@ -164,10 +165,7 @@ class WorkLogCleaner:
     def should_skip(self, line: str) -> bool:
         """判断是否应该进入跳过状态"""
         line = line.strip()
-        for trigger in self.skip_triggers:
-            if trigger in line:
-                return True
-        return False
+        return bool(re.match(self.skip_trigger_pattern, line))
 
     def clean_line(self, line: str) -> str:
         """清洗单行内容"""
@@ -190,20 +188,14 @@ class WorkLogCleaner:
         # 取最后一个匹配的括号内容
         names_str = matches[-1].strip()
 
-        # 按顿号、逗号分隔姓名
-        names = re.split(r'[、,，]', names_str)
+        # 按顿号、逗号分隔姓名；括号内多人时必须跳过，不能先按白名单过滤后误判为单人
+        names = [name.strip() for name in re.split(r'[、,，]', names_str) if name.strip()]
 
-        # 过滤掉非姓名内容（如日期、数字、技术术语等）
-        valid_names = []
-        for name in names:
-            name = name.strip()
-            # 简单判断：姓名通常是2-4个汉字
-            if name and 2 <= len(name) <= 4 and all('\u4e00' <= c <= '\u9fff' for c in name):
-                # 过滤掉非姓名词汇
-                if name not in self.non_name_words:
-                    valid_names.append(name)
+        if len(names) > 1:
+            return names
 
-        return valid_names
+        # 仅保留固定人员名单中的姓名
+        return [name for name in names if name in self.team_members]
 
     def process_line(self, line: str, current_date: str,
                     details: Dict[str, Dict[str, List[str]]]):

@@ -1,7 +1,6 @@
 ---
 name: ppt-reviewer
 description: "评审公司演讲草稿、分享提纲、路演文案、汇报内容和PPT大纲，并按固定四轮流程给出优化建议；如果信息完整，完成检查和评审后直接输出受控的PPT逐页结构化文案；如果存在待确认项，立即停止并要求用户澄清。用户只要提到演讲策划、演讲稿评审、路演优化、分享内容打磨、汇报PPT结构、逐页PPT文案，尤其是希望先评审再出页稿时，必须使用这个skill。"
-allowed-tools: Read, Glob, AskUserQuestion
 ---
 
 # PPT 演讲评审器

@@ -1,7 +1,6 @@
 ---
 name: mind-partner
 description: "私人AI协作伙伴。了解用户的工作背景和思维偏好，接收碎片化、口语化的想法，通过多轮迭代协作帮助用户完成任务。适用于想法分析、方案设计、决策辅助、问题诊断、头脑风暴等场景。当用户需要深度思考、协作讨论、整理想法或分析问题时使用。"
-allowed-tools: AskUserQuestion, Read, Write
 ---
 
 # Mind Partner

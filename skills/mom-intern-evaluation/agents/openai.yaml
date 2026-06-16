@@ -1,0 +1,4 @@
+interface:
+  display_name: "MOM实习生绩效考核"
+  short_description: "基于工作日志生成MOM实习生A/B/C绩效考核报告"
+  default_prompt: "Use $mom-intern-evaluation to generate a monthly MOM intern performance evaluation report from work logs."
