@@ -28,7 +28,7 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 ## 技能列表
 
-当前仓库包含 **15 个技能**。
+当前仓库包含 **18 个技能**。
 
 ### 需求与产品协作
 
@@ -53,9 +53,12 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
+| [humanizer](humanizer/) | 中文文本人性化 | 去除 AI 写作痕迹，使文本更自然、更像人写 |
+| [mental-model](mental-model/) | 思维模型卡 | 从碎片、对话和复盘中提炼隐性决策规则 |
 | [reading-marker](reading-marker/) | 阅读标记 | 将长文标记为可复述、可复用、可检查的认知导航 |
 | [seed-sprout-report](seed-sprout-report/) | 发芽报告助手 | 将记录、笔记或想法拓展成跨领域联想文本 |
 | [sop-creator](sop-creator/) | SOP 创建器 | 将业务流程整理为可执行的标准作业程序 |
+| [work-thought-doc-writer](work-thought-doc-writer/) | 工作洞察文章写作 | 将工作素材、管理观察和产品判断写成中文洞察文章 |
 
 ### 绩效与评价
 
