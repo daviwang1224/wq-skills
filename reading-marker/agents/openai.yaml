@@ -1,0 +1,4 @@
+interface:
+  display_name: "阅读标记"
+  short_description: "将长文阅读标记为可复述、可复用、可检查的认知导航流程方法"
+  default_prompt: "使用 $reading-marker 标记这篇文章，让我只看标记就能复述主线。"

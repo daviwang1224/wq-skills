@@ -28,49 +28,47 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 ## 技能列表
 
-当前仓库包含 **17 个技能**。
+当前仓库包含 **15 个技能**。
 
 ### 需求与产品协作
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [agent-md-advisor](skills/agent-md-advisor/) | Agent 指令文件顾问 | 审查、诊断、重写或创建 AGENTS.md / CLAUDE.md 等 agent 指令文件 |
-| [ask-clarify](skills/ask-clarify/) | 需求澄清与结构化 | 将模糊需求转化为可执行任务定义 |
-| [mind-partner](skills/mind-partner/) | 私人 AI 协作伙伴 | 基于用户背景进行想法分析、方案设计和决策辅助 |
-| [prd-writer](skills/prd-writer/) | PRD 编写助手 | 引导产品发现对话并生成中文 PRD |
+| [agent-md-advisor](agent-md-advisor/) | Agent 指令文件顾问 | 审查、诊断、重写或创建 AGENTS.md / CLAUDE.md 等 agent 指令文件 |
+| [ask-clarify](ask-clarify/) | 需求澄清与结构化 | 将模糊需求转化为可执行任务定义 |
+| [mind-partner](mind-partner/) | 私人 AI 协作伙伴 | 基于用户背景进行想法分析、方案设计和决策辅助 |
+| [prd-writer](prd-writer/) | PRD 编写助手 | 引导产品发现对话并生成中文 PRD |
 
 ### 评审与分析
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [datamodel-checker](skills/datamodel-checker/) | 数据模型检查 | 验证 KMMOM 数据模型规范符合性和业务设计合理性 |
-| [interviewer-review-assistant](skills/interviewer-review-assistant/) | 面试官复盘助手 | 复盘面试提问质量、追问闭环和能力覆盖 |
-| [isa95-model-reviewer](skills/isa95-model-reviewer/) | ISA-95 模型评审 | 评审制造业业务模型、领域模型和数据模型的合理性 |
-| [oss-scanner](skills/oss-scanner/) | 开源组件扫描与合规分析 | 扫描依赖并分析许可证合规风险 |
-| [ubiquitous-language](skills/ubiquitous-language/) | 统一语言 | 维护 CONTEXT.md / CONTEXT-MAP.md，统一项目领域术语 |
+| [datamodel-checker](datamodel-checker/) | 数据模型检查 | 验证 KMMOM 数据模型规范符合性和业务设计合理性 |
+| [interviewer-review-assistant](interviewer-review-assistant/) | 面试官复盘助手 | 复盘面试提问质量、追问闭环和能力覆盖 |
+| [isa95-model-reviewer](isa95-model-reviewer/) | ISA-95 模型评审 | 评审制造业业务模型、领域模型和数据模型的合理性 |
+| [oss-scanner](oss-scanner/) | 开源组件扫描与合规分析 | 扫描依赖并分析许可证合规风险 |
+| [ubiquitous-language](ubiquitous-language/) | 统一语言 | 维护 CONTEXT.md / CONTEXT-MAP.md，统一项目领域术语 |
 
 ### 文档与汇报
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [lowcode-biweekly-report](skills/lowcode-biweekly-report/) | 低代码平台双周汇报助手 | 基于工作日志生成低代码平台双周汇报 |
-| [meeting-summarizer](skills/meeting-summarizer/) | 会议纪要总结器 | 将会议内容整理为规范会议纪要 |
-| [seed-sprout-report](skills/seed-sprout-report/) | 发芽报告助手 | 将记录、笔记或想法拓展成跨领域联想文本 |
-| [sop-creator](skills/sop-creator/) | SOP 创建器 | 将业务流程整理为可执行的标准作业程序 |
-| [week-report-assistant](skills/week-report-assistant/) | 双周汇报助手 | 从团队工作日志生成双周进展汇报 |
+| [reading-marker](reading-marker/) | 阅读标记 | 将长文标记为可复述、可复用、可检查的认知导航 |
+| [seed-sprout-report](seed-sprout-report/) | 发芽报告助手 | 将记录、笔记或想法拓展成跨领域联想文本 |
+| [sop-creator](sop-creator/) | SOP 创建器 | 将业务流程整理为可执行的标准作业程序 |
 
 ### 绩效与评价
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [mom-intern-evaluation](skills/mom-intern-evaluation/) | MOM 实习生绩效考核 | 基于实习生日志生成月度绩效考核报告 |
-| [team-monthly-evaluation](skills/team-monthly-evaluation/) | 团队月度评价 | 基于团队日志生成月度综合评价 |
+| [mom-intern-evaluation](mom-intern-evaluation/) | MOM 实习生绩效考核 | 基于实习生日志生成月度绩效考核报告 |
+| [team-monthly-evaluation](team-monthly-evaluation/) | 团队月度评价 | 基于团队日志生成月度综合评价 |
 
 ### 同事画像
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [wangqing](skills/wangqing/) | 同事画像技能 | 基于个人工作画像提供协作、判断和表达风格参考 |
+| [wangqing](wangqing/) | 同事画像技能 | 基于个人工作画像提供协作、判断和表达风格参考 |
 
 ## 编写要求
 
