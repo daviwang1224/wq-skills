@@ -1,0 +1,4 @@
+interface:
+  display_name: "谋定而后动，先想再做"
+  short_description: "适合简单任务：先澄清目标，再比较多种方案并推荐"
+  default_prompt: "Use $think2do to analyze my goal before giving solutions."
