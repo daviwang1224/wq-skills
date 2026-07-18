@@ -1,5 +1,5 @@
 ---
-name: colleague_boss-ning_work
+name: colleague-boss-ning-work
 description: 宁总 的工作能力（仅 Work，无 Persona）
 user-invocable: true
 ---

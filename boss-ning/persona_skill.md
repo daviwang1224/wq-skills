@@ -1,5 +1,5 @@
 ---
-name: colleague_boss-ning_persona
+name: colleague-boss-ning-persona
 description: 宁总 的人物性格（仅 Persona，无工作能力）
 user-invocable: true
 ---
