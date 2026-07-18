@@ -108,6 +108,6 @@
 - [内置数据模型规格](07-governance/standards/builtin-data-model-spec.md)
 
 ### 检查工具信息
-- 工具名称：KMMOM数据模型检查技能
+- 工具名称：MOM数据模型检查技能
 - 检查版本：v1.0
 - 检查时间：{YYYY-MM-DD HH:mm:ss}

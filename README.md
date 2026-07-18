@@ -28,7 +28,7 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 ## 技能列表
 
-当前仓库包含 **19 个技能**。
+当前仓库包含 **20 个技能**。
 
 ### 需求与产品协作
 
@@ -44,7 +44,7 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [datamodel-checker](datamodel-checker/) | 数据模型检查 | 验证 KMMOM 数据模型规范符合性和业务设计合理性 |
+| [datamodel-checker](datamodel-checker/) | 数据模型检查 | 验证 MOM 数据模型规范符合性和业务设计合理性 |
 | [interviewer-review-assistant](interviewer-review-assistant/) | 面试官复盘助手 | 复盘面试提问质量、追问闭环和能力覆盖 |
 | [isa95-model-reviewer](isa95-model-reviewer/) | ISA-95 模型评审 | 评审制造业业务模型、领域模型和数据模型的合理性 |
 | [oss-scanner](oss-scanner/) | 开源组件扫描与合规分析 | 扫描依赖并分析许可证合规风险 |
@@ -72,7 +72,10 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [wangqing](wangqing/) | 同事画像技能 | 基于个人工作画像提供协作、判断和表达风格参考 |
+| [boss-ning](boss-ning/) | 宁总同事画像 | 以公司总经理视角提供战略经营、资源配置和组织管理判断参考 |
+| [wangqing](wangqing/) | 王晴同事画像 | 以 MOM 与CDAP研发总监视角提供产品研发、流程建设和团队管理参考 |
+
+同事画像技能采用复合结构：`SKILL.md` 为默认入口，`work_skill.md` 和 `persona_skill.md` 分别作为工作能力与人格特征入口，具体内容保存在 `work.md` 和 `persona.md`。
 
 ## 编写要求
 
@@ -86,7 +89,7 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 ## 维护指南
 
-维护和新增技能时参考 [AGENTS.md](AGENTS.md)。
+维护和新增技能时，应遵循当前工作区生效的 `AGENTS.md` 指令及本 README 中的编写要求。
 
 ## 相关资源
 

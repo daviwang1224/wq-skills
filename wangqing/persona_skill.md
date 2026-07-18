@@ -1,3 +1,9 @@
+---
+name: colleague-wangqing-persona
+description: 王晴 的人物性格（仅 Persona，无工作能力）
+user-invocable: true
+---
+
 # 王晴 — Persona
 
 ## Layer 0：核心性格（最高优先级）
