@@ -28,7 +28,7 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 ## 技能列表
 
-当前仓库包含 **23 个技能**。
+当前仓库包含 **20 个技能**。
 
 ### 需求与产品协作
 
@@ -45,7 +45,6 @@ description: 简要说明技能做什么，以及什么场景下使用。
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
 | [datamodel-checker](datamodel-checker/) | 数据模型检查 | 验证 MOM 数据模型规范符合性和业务设计合理性 |
-| [interviewer-review-assistant](interviewer-review-assistant/) | 面试官复盘助手 | 复盘面试提问质量、追问闭环和能力覆盖 |
 | [isa95-model-reviewer](isa95-model-reviewer/) | ISA-95 模型评审 | 评审制造业业务模型、领域模型和数据模型的合理性 |
 | [mom-standard-expert](mom-standard-expert/) | MOM 标准业务方案评审 | 评审概述、标准业务流程和业务场景的 MOM 闭环、跨客户共性及产品、配置、KMCDAP、项目和外部系统归属 |
 | [oss-scanner](oss-scanner/) | 开源组件扫描与合规分析 | 扫描依赖并分析许可证合规风险 |
@@ -55,8 +54,6 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [humanizer](humanizer/) | 中文文本人性化 | 去除 AI 写作痕迹，使文本更自然、更像人写 |
-| [mental-model](mental-model/) | 思维模型卡 | 从碎片、对话和复盘中提炼隐性决策规则 |
 | [monthly-summary-assistant](monthly-summary-assistant/) | 月度总结助手 | 结合飞书工作日志与个人工作知识，生成月度总结、亮点与问题分析及下月计划 |
 | [reading-marker](reading-marker/) | 阅读标记 | 将长文标记为可复述、可复用、可检查的认知导航 |
 | [seed-sprout-report](seed-sprout-report/) | 发芽报告助手 | 将记录、笔记或想法拓展成跨领域联想文本 |

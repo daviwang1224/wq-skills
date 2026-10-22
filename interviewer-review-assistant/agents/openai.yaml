@@ -1,4 +1,0 @@
-interface:
-  display_name: "面试官助理"
-  short_description: "复盘面试官的轮次匹配、能力覆盖、追问闭环和改进动作"
-  default_prompt: "Use $interviewer-review-assistant to review interviewer performance from interview transcripts, chat logs, or notes."
