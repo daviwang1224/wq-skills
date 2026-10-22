@@ -28,17 +28,17 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 ## 技能列表
 
-当前仓库包含 **22 个技能**。
+当前仓库包含 **23 个技能**。
 
 ### 需求与产品协作
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
 | [agent-md-advisor](agent-md-advisor/) | Agent 指令文件顾问 | 审查、诊断、重写或创建 AGENTS.md / CLAUDE.md 等 agent 指令文件 |
-| [ask-clarify](ask-clarify/) | 反谄媚需求澄清 | 通过双向钢人论证和递进追问，帮助用户区分表面问题与真实问题，找到问题本质 |
+| [steel-man](steel-man/) | 钢人论证与需求澄清 | 通过双向钢人论证和递进追问，帮助用户区分表面问题与真实问题，找到问题本质 |
 | [mind-partner](mind-partner/) | 私人 AI 协作伙伴 | 基于用户背景进行想法分析、方案设计和决策辅助 |
 | [prd-writer](prd-writer/) | PRD 编写助手 | 引导产品发现对话并生成中文 PRD |
-| [think2do](think2do/) | 谋定而后动，先想再做 | 简单任务中先澄清目标，再给出多方案对比和推荐结论 |
+| [think2do](think2do/) | 谋定而后动 | 讨论问题与决策时，先对齐目标和约束，再比较方案并给出明确推荐 |
 
 ### 评审与分析
 
@@ -57,6 +57,7 @@ description: 简要说明技能做什么，以及什么场景下使用。
 |------|------|---------|
 | [humanizer](humanizer/) | 中文文本人性化 | 去除 AI 写作痕迹，使文本更自然、更像人写 |
 | [mental-model](mental-model/) | 思维模型卡 | 从碎片、对话和复盘中提炼隐性决策规则 |
+| [monthly-summary-assistant](monthly-summary-assistant/) | 月度总结助手 | 结合飞书工作日志与个人工作知识，生成月度总结、亮点与问题分析及下月计划 |
 | [reading-marker](reading-marker/) | 阅读标记 | 将长文标记为可复述、可复用、可检查的认知导航 |
 | [seed-sprout-report](seed-sprout-report/) | 发芽报告助手 | 将记录、笔记或想法拓展成跨领域联想文本 |
 | [sop-creator](sop-creator/) | SOP 创建器 | 将业务流程整理为可执行的标准作业程序 |

@@ -1,0 +1,4 @@
+interface:
+  display_name: "月度总结助手"
+  short_description: "读取产品团队日志与个人工作知识，生成月度总结、问题分析和下月计划"
+  default_prompt: "使用 $monthly-summary-assistant 生成指定月份的产品团队月度总结。"
