@@ -1,4 +1,0 @@
-interface:
-  display_name: "MOM 标准业务方案评审专家"
-  short_description: "评审MOM标准业务流程、业务场景、闭环完整性及产品平台边界"
-  default_prompt: "使用 $mom-standard-expert 评审这份产品标准业务方案的概述、业务流程和业务场景。"

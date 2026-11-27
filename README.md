@@ -28,7 +28,7 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 ## 技能列表
 
-当前仓库包含 **21 个技能**。
+当前仓库包含 **17 个技能**。
 
 ### 需求与产品协作
 
@@ -36,7 +36,6 @@ description: 简要说明技能做什么，以及什么场景下使用。
 |------|------|---------|
 | [agent-md-advisor](agent-md-advisor/) | Agent 指令文件顾问 | 审查、诊断、重写或创建 AGENTS.md / CLAUDE.md 等 agent 指令文件 |
 | [steel-man](steel-man/) | 钢人论证与需求澄清 | 通过双向钢人论证和递进追问，帮助用户区分表面问题与真实问题，找到问题本质 |
-| [mind-partner](mind-partner/) | 私人 AI 协作伙伴 | 基于用户背景进行想法分析、方案设计和决策辅助 |
 | [prd-writer](prd-writer/) | PRD 编写助手 | 引导产品发现对话并生成中文 PRD |
 | [think2do](think2do/) | 谋定而后动 | 讨论问题与决策时，先对齐目标和约束，再比较方案并给出明确推荐 |
 | [in-your-own-words](in-your-own-words/) | 用自己的话复述 | 用自己的话复述理解到的用户目标和想解决的问题，用于确认双方理解一致 |
@@ -45,9 +44,6 @@ description: 简要说明技能做什么，以及什么场景下使用。
 
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
-| [datamodel-checker](datamodel-checker/) | 数据模型检查 | 验证 MOM 数据模型规范符合性和业务设计合理性 |
-| [isa95-model-reviewer](isa95-model-reviewer/) | ISA-95 模型评审 | 评审制造业业务模型、领域模型和数据模型的合理性 |
-| [mom-standard-expert](mom-standard-expert/) | MOM 标准业务方案评审 | 评审概述、标准业务流程和业务场景的 MOM 闭环、跨客户共性及产品、配置、KMCDAP、项目和外部系统归属 |
 | [oss-scanner](oss-scanner/) | 开源组件扫描与合规分析 | 扫描依赖并分析许可证合规风险 |
 | [ubiquitous-language](ubiquitous-language/) | 统一语言 | 维护 CONTEXT.md / CONTEXT-MAP.md，统一项目领域术语 |
 
@@ -56,11 +52,11 @@ description: 简要说明技能做什么，以及什么场景下使用。
 | 技能 | 描述 | 主要功能 |
 |------|------|---------|
 | [monthly-summary-assistant](monthly-summary-assistant/) | 月度总结助手 | 结合飞书工作日志与个人工作知识，生成月度总结、亮点与问题分析及下月计划 |
+| [dingtalk-worklog](dingtalk-worklog/) | 钉钉个人工作日志 | 按指定日期读取钉钉听记摘要，整理明确属于王晴本人的会议与讨论工作日志 |
 | [reading-marker](reading-marker/) | 阅读标记 | 将长文标记为可复述、可复用、可检查的认知导航 |
-| [seed-sprout-report](seed-sprout-report/) | 发芽报告助手 | 将记录、笔记或想法拓展成跨领域联想文本 |
 | [sop-creator](sop-creator/) | SOP 创建器 | 将业务流程整理为可执行的标准作业程序 |
-| [work-thought-doc-writer](work-thought-doc-writer/) | 工作洞察文章写作 | 将工作素材、管理观察和产品判断写成中文洞察文章 |
-| [team-worklog](team-worklog/) | 团队工作日志 | 将口语化、零散或流水账式工作记录转译为一整段专业日志 |
+| [my-writing](my-writing/) | 我的写作助手 | 将日常思考、阅读学习所得或零散想法写成观点鲜明、逻辑清楚的中文文章，并区分原作者观点与个人理解 |
+| [my-worklog](my-worklog/) | 我的工作日志 | 将口语化或零散的工作记录整理为一段真实、专业的工作日志 |
 
 ### 绩效与评价
 
